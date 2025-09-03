@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cargo Pharma Shippers Conference 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container z-top">
+      <img src="assets/logo.png" alt="Cargo Pharma Shippers Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero z-diagonal">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <h1>Cargo Pharma Shippers Conference 2025</h1>
+        <p>Innovating Cold Chain Logistics for Pharma</p>
+        <ul class="event-details">
+          <li><strong>Date:</strong> April 10-12, 2025</li>
+          <li><strong>Location:</strong> Berlin, Germany</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="#registration" class="btn btn-primary">Register Now</a>
+          <a href="assets/agenda.pdf" class="btn btn-outline" download>Download Agenda</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <!-- Google Maps Embed -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.791607341843!2d13.40495431579845!3d52.52000617981307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c4d85c6e71%3A0x7c0c7dff1f1c1b63!2sBerlin!5e0!3m2!1sen!2sde!4v1631219798393!5m2!1sen!2sde" 
+                width="300" height="200" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="z-horizontal">
+    <div class="container section-card">
+      <h2>About the Conference</h2>
+      <p>
+        The Cargo Pharma Shippers Conference brings together innovators, regulators, and logistics leaders to shape the future of pharmaceutical cold chain shipping. 
+        <ul>
+          <li>Connect with industry leaders and peers</li>
+          <li>Discover the latest in compliance & technology</li>
+          <li>Participate in interactive workshops & panels</li>
+        </ul>
+      </p>
+      <img src="assets/about.jpg" alt="About Conference" class="rounded-img">
+    </div>
+  </section>
+  <!-- Agenda Section -->
+  <section id="agenda" class="z-diagonal">
+    <div class="container section-card">
+      <h2>Agenda</h2>
+      <!-- Placeholder for FullCalendar or interactive agenda plugin -->
+      <div id="agenda-timeline">
+        <ul>
+          <li><b>Day 1:</b> Keynotes, Panels, Welcome Reception</li>
+          <li><b>Day 2:</b> Breakout Sessions, Expo, Networking</li>
+          <li><b>Day 3:</b> Workshops, Closing Plenary</li>
+        </ul>
+      </div>
+      <a href="assets/agenda.pdf" download class="btn btn-outline">Download Full Agenda</a>
+    </div>
+  </section>
+  <!-- Speakers Section -->
+  <section id="speakers" class="z-horizontal">
+    <div class="container section-card">
+      <h2>Featured Speakers</h2>
+      <div class="speakers-grid">
+        <!-- Example Speaker -->
+        <div class="speaker-card">
+          <img src="assets/speaker1.jpg" alt="Dr. Jane Pharma" class="speaker-img">
+          <h3>Dr. Jane Pharma</h3>
+          <p>Chief Science Officer, PharmaCorp</p>
+          <button class="btn btn-outline" onclick="showSpeakerModal('jane')">View Bio</button>
+        </div>
+        <div class="speaker-card">
+          <img src="assets/speaker2.jpg" alt="Mr. John Cargo" class="speaker-img">
+          <h3>Mr. John Cargo</h3>
+          <p>Director Logistics, FastShip</p>
+          <button class="btn btn-outline" onclick="showSpeakerModal('john')">View Bio</button>
+        </div>
+        <!-- Add more speakers as needed -->
+      </div>
+    </div>
+    <!-- Speaker Bio Modals (hidden by default, filled by JS) -->
+    <div id="speaker-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeSpeakerModal()">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="z-diagonal">
+    <div class="container section-card">
+      <h2>Sponsors & Partners</h2>
+      <div class="sponsor-logos">
+        <img src="assets/sponsor1.png" alt="Sponsor 1" class="sponsor-img">
+        <img src="assets/sponsor2.png" alt="Sponsor 2" class="sponsor-img">
+        <!-- Add more sponsor logos -->
+      </div>
+      <button class="btn btn-primary" onclick="openSponsorForm()">Become a Sponsor</button>
+      <!-- Sponsor Inquiry Modal -->
+      <div id="sponsor-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeSponsorModal()">&times;</span>
+          <h3>Sponsor Inquiry</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Registration Section -->
+  <section id="registration" class="z-horizontal">
+    <div class="container section-card">
+      <h2>Register Now</h2>
+      <form id="registration-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="company" placeholder="Company" required>
+        <input type="text" name="job" placeholder="Job Title" required>
+        <!-- More fields as needed -->
+        <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+      </form>
+      <div id="registration-success" style="display:none;">
+        <p>Registration successful! Your registration ID is <span id="reg-id"></span>.</p>
+      </div>
+      <!-- Oracle integration placeholder: Replace form action/handler with Oracle APEX/REST endpoint -->
+    </div>
+  </section>
+  <!-- Payment Section -->
+  <section id="payment" class="z-diagonal">
+    <div class="container section-card">
+      <h2>Payment</h2>
+      <p>Secure your spot with online payment. (Oracle Payment Gateway integration placeholder)</p>
+      <form id="payment-form">
+        <input type="text" name="card" placeholder="Credit Card Number" required>
+        <input type="text" name="expiry" placeholder="MM/YY" required>
+        <input type="text" name="cvc" placeholder="CVC" required>
+        <button type="submit" class="btn btn-primary">Pay Now</button>
+      </form>
+      <div id="payment-success" style="display:none;">
+        <p>Thank you for your payment! A receipt has been sent to your email.</p>
+      </div>
+      <!-- Replace with Oracle Payment integration as needed -->
+    </div>
+  </section>
+  <!-- FAQ Section -->
+  <section id="faq" class="z-horizontal">
+    <div class="container section-card">
+      <h2>FAQ</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn">What is the conference about?</button>
+          <div class="accordion-panel">
+            <p>The conference focuses on innovations, compliance, and networking in pharma cold chain logistics.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">How can I register?</button>
+          <div class="accordion-panel">
+            <p>Use the online registration form above. Oracle backend will process your details securely.</p>
+          </div>
+        </div>
+        <!-- Add more FAQs as needed -->
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="z-diagonal">
+    <div class="container section-card">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <p>Email: info@cargopharmashippers.com</p>
+        <p>Phone: +49 30 12345678</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.791607341843!2d13.40495431579845!3d52.52000617981307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c4d85c6e71%3A0x7c0c7dff1f1c1b63!2sBerlin!5e0!3m2!1sen!2sde!4v1631219798393!5m2!1sen!2sde" 
+                width="300" height="150" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.svg" alt="Twitter"></a>
+        <!-- Add more -->
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#registration">Register</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p>&copy; 2025 Cargo Pharma Shippers. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
